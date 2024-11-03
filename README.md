@@ -2,7 +2,7 @@
 Data Processing and intermediate data analysis of N. gonnorrhea isolates from Saskatchewan 2017-2022 looking at treands during the COVID-19 Pandemic. This Github includes the data processing and internmediate analysis for this work.
 
 ## Data Processing
-###Assembly and Quality Control
+### Assembly and Quality Control
 1. The de novo genome assembly and analysis was generated using the Gen2Epi [(Singh et al, 2019)](https://github.com/ReemaSingh/Gen2Epi). Gonnorheae specific data processing was initially also done with this pipeline using the *assembly.sh* script to initiate the pipeline.
 2. The quality of the assemblies was determined using QUAST with the *quast.sh* script.
 3. Additional non-Programmatic Analysis: Sequence-typing (MLST, NG-STAR, NG-MAST) was completed using Pathogenwatch. When sequence typing for NG-STAR and MG-MAST was incomplete using Pathogenwatch, the genomes were submitted to PubMLST for further sequence typing and allele comparison. Alleles that did not match any version on PubMLST and were considered novel were submitted for inclusion in the database for inclusion and the closest version of the allele in the database was used for typing. Genogroups were determined by extracting the porB and tbpB genes from the genomes and these genes were used to generate alignments. Genogroups were assigned based on the tbpB and porB genes being => 99% identical then the genogroup was named by the predominant NG-MAST sequence type. If there was no predominant sequence type, the group was named after all the sequence types in the group.
